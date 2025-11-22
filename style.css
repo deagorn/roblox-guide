@@ -4,46 +4,35 @@ body {
   color: #222;
   margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  align-items: center; /* Центрування по вертикалі */
+  justify-content: center; /* Центрування по горизонталі */
+  min-height: 100vh;
+  /*padding: 20px;*/
+  overflow: hidden; /* Прибираємо загальну прокрутку */
 }
 
 .container {
   text-align: center;
   background: white;
-  border-radius: 20px;
   padding: 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   max-width: 700px;
+  overflow-y: auto; /* Прокручування тільки в контейнері */
+  border-radius: 20px;
+  overflow-y: auto; /* Прокручування тільки в контейнері */
+  border: 10px solid #ffffff; /* Білий контур, щоб контур був частиною заокруглення */
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 2em;
-}
-
-.buttons a {
-  text-decoration: none;
-  background-color: #00aaff;
-  border: none;
-  color: white;
-  padding: 15px 30px;
-  margin: 10px;
-  border-radius: 12px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.buttons a:hover {
-  background-color: #0077cc;
 }
 
 .instructions {
   text-align: left;
   margin-top: 20px;
   font-size: 1.1em;
+  line-height: 1.5;
 }
 
 .screenshots {
@@ -56,7 +45,19 @@ h1 {
   margin: 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-/* Додано стиль для кнопки повернення */
+
+.video-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* Стиль кнопки повернення */
 .back {
   text-decoration: none;
   position: fixed;
@@ -82,4 +83,88 @@ h1 {
 
 .back:focus {
   outline: none; /* Відключення обводки при фокусі */
+}
+
+img {
+  max-width: 100%; /* Забезпечує, що зображення не буде ширшим за контейнер */
+  height: auto; /* Зберігає пропорції зображення */
+  border-radius: 10px; /* Заокруглення куточків зображення */
+  margin: 10px 0; /* Відступи зверху та знизу */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Легка тінь для зображення */
+}
+
+.button {
+  text-decoration: none;
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #0077cc;
+}
+
+/* Адаптація для мобільних пристроїв */
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Зменшуємо шрифт на маленьких екранах */
+    padding: 10px; /* Додаємо невеликі відступи для комфортного перегляду */
+  }
+
+  .container {
+    padding: 20px; /* Зменшуємо відступи в контейнері для маленьких екранів */
+    max-width: 100%; /* Розтягуємо контейнер на всю ширину екрана */
+    margin-left: 10px;
+    margin-right: 10px; /* Відступи зліва та справа */
+    border-radius: 20px; /* Заокруглення контейнера */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Легка тінь для контейнера */
+    border: none; /* Прибираємо бордер */
+    overflow: visible; /* Відключаємо прокручування */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Менший розмір заголовка для мобільних пристроїв */
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column; /* Кнопки розташовуємо вертикально */
+    align-items: center;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    width: 100%; /* Розтягуємо кнопки на всю ширину */
+    margin: 10px 0; /* Відступи між кнопками */
+    text-align: center; /* Центруємо текст всередині кнопки */
+    border-radius: 12px; /* Заокруглення кнопок */
+    padding: 15px 0; /* Відступи всередині кнопок */
+  }
+
+  .back {
+    text-align: center;
+    font-size: 0.9em; /* Зменшуємо шрифт кнопки на мобільних */
+    padding: 10px 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Центруємо кнопку горизонтально */
+    background-color: #4caf50;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 12px 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легка тінь для кнопки */
+  }
+
+  .video-section iframe {
+    height: 250px; /* Зменшуємо висоту відео */
+  }
 }

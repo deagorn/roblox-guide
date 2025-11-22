@@ -1,0 +1,213 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(120deg, #00aaff, #88eeff);
+  color: #222;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Центрування по вертикалі */
+  justify-content: center; /* Центрування по горизонталі */
+  min-height: 100vh;
+  /*padding: 20px;*/
+  overflow: hidden; /* Прибираємо загальну прокрутку */
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  height: 80vh;
+  overflow-y: auto; /* Прокручування тільки в контейнері */
+  border-radius: 20px;
+  overflow-y: auto; /* Прокручування тільки в контейнері */
+  border: 10px solid #ffffff; /* Білий контур, щоб контур був частиною заокруглення */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.instructions {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.screenshots {
+  margin-top: 20px;
+}
+
+.screenshots img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* Стиль кнопки повернення */
+.back {
+  text-decoration: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #4caf50; /* М'який зелений колір */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px; /* Кругліший вигляд */
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none; /* Без рамки */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легка тінь для глибини */
+  text-transform: uppercase; /* Всі літери великі */
+  max-width: 120px;
+}
+
+.back:hover {
+  background-color: #45a049; /* Трохи темніший зелений при наведенні */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Посилена тінь при наведенні */
+}
+
+.back:focus {
+  outline: none; /* Відключення обводки при фокусі */
+}
+
+img {
+  max-width: 100%; /* Забезпечує, що зображення не буде ширшим за контейнер */
+  height: auto; /* Зберігає пропорції зображення */
+  border-radius: 10px; /* Заокруглення куточків зображення */
+  margin: 10px 0; /* Відступи зверху та знизу */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Легка тінь для зображення */
+}
+
+.button {
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #0077cc;
+}
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+  body {
+    font-family: "Comic Sans MS", sans-serif;
+    background: linear-gradient(120deg, #00aaff, #88eeff);
+    color: #222;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start; /* Початок вертикального вирівнювання */
+    justify-content: center; /* Центрування по горизонталі */
+    min-height: 100vh;
+    overflow: hidden; /* Прибираємо загальну прокрутку */
+  }
+
+  .container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    min-height: 80vh;
+    overflow-y: auto; /* Прокручування тільки в контейнері */
+    border-radius: 20px;
+    border: 10px solid #ffffff;
+  }
+
+  /* Стиль кнопки повернення */
+  .back {
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Центруємо кнопку горизонтально */
+    width: 90%; /* Ширина кнопки на 90% екрану */
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легка тінь для кнопки */
+    text-transform: uppercase; /* Всі літери великі */
+  }
+
+  .back:hover {
+    background-color: #45a049; /* Трохи темніший зелений при наведенні */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Посилена тінь при наведенні */
+  }
+
+  .back:focus {
+    outline: none; /* Відключення обводки при фокусі */
+  }
+
+  /* Адаптація для мобільних пристроїв */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 100%;
+      margin-top: 90px; /* Відступ для уникнення перекриття кнопкою */
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    .instructions {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    .video-section iframe {
+      height: 200px;
+    }
+
+    .screenshot img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .back {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
+}
